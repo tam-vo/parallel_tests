@@ -150,6 +150,10 @@ To rerun failures:
 
 	cucumber @tmp/cucumber_failures.log
 
+Diff with original version (grosser's version)
+===================
+- Able to work with [redis_test](https://github.com/phuongnd08/redis_test)
+
 Setup for non-rails
 ===================
     gem install parallel_tests
