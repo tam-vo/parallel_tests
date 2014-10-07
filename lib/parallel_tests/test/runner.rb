@@ -54,6 +54,7 @@ module ParallelTests
         def execute_command(cmd, process_number, num_processes, options)
           env = (options[:env] || {}).merge(
             "TEST_ENV_NUMBER" => test_env_number(process_number),
+            "TEST_REDIS_PORT" => 9736 + process_number,
             "PARALLEL_TEST_GROUPS" => num_processes
           )
           cmd = "nice #{cmd}" if options[:nice]
